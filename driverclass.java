@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class driverclass {
 
@@ -28,6 +29,46 @@ public class driverclass {
             {
                 case 1:
                     System.out.println("add emp");
+
+                    System.out.println("Enter emp code: ");
+                    Scanner sc1=new Scanner(System.in);
+                    int num= sc1.nextInt();
+                    Ecode.add(num);
+
+                    System.out.println("Enter emp name: ");
+                    String str=new String();
+                    Scanner sc2=new Scanner(System.in);
+                    str=sc2.nextLine();
+                    EName.add(str);
+
+                    System.out.println("Enter emp desgn: ");
+                    str=new String();
+                    Scanner sc3=new Scanner(System.in);
+                    str=sc3.nextLine();
+                    Desgn.add(str);
+
+                    System.out.println("Enter emp sal: ");
+                    Scanner sc4=new Scanner(System.in);
+                    num= sc4.nextInt();
+                    Sal.add(num);
+
+                    System.out.println("Enter emp comp name:");
+                    str=new String();
+                    Scanner sc5=new Scanner(System.in);
+                    str=sc5.nextLine();
+                    CName.add(str);
+
+                    System.out.println("Enter phone num: ");
+                    Scanner sc6=new Scanner(System.in);
+                    long number= sc6.nextLong();
+                    phno.add(num);
+
+
+                    System.out.println("Enter email id: ");
+                    str=new String();
+                    Scanner sc7=new Scanner(System.in);
+                    str=sc7.nextLine();
+                    Emailid.add(str);
 
 
                 case 2:
