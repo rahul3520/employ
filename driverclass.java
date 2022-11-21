@@ -99,6 +99,7 @@ public class driverclass {
                     Scanner sc8=new Scanner(System.in);
                     int ec=sc.nextInt();
 
+                    int flag=0;
                     //for each loop
                     for (int i=0;i< Ecode.size();i++)
                     {
@@ -111,17 +112,39 @@ public class driverclass {
                             System.out.println(phno.get(i));
                             System.out.println(Emailid.get(i));
 
+                            flag=1;
                         }
-                        else
-                        {
-                            System.out.println("Employee code not present\n");
-                        }
+
+                    }
+                    if(flag==0)
+                    {
+                        System.out.println("Employee code not present\n");
                     }
 
                     break;
 
                 case 4:
                     System.out.println("delete emp");
+
+                    System.out.println("Enter emp code to delete:");
+                    Scanner sc9=new Scanner(System.in);
+                    int ecod= sc9.nextInt();
+
+                    int flag1=0;
+                    for(int i=0;i< Ecode.size();i++)
+                    {
+                        if(ecod==Ecode.get(i))
+                        {
+                            System.out.println("deleting employee record "+EName.get(i));
+                            Ecode.remove(i);
+                            flag1=1;
+                        }
+
+                    }
+                    if(flag1==0)
+                    {
+                        System.out.println("Employee code not present\n");
+                    }
 
                     break;
 
@@ -136,7 +159,7 @@ public class driverclass {
 
             }
 
-            System.out.println("Enter 1 to exit \n 0 to continue:");
+            System.out.println("Enter 1 to exit\n0 to continue:");
             exit= sc.nextInt();
 
         }
