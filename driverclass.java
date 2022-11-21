@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class driverclass {
 
+
     public static void main(String[] args) {
 
         System.out.println("Employee details");
@@ -13,14 +14,15 @@ public class driverclass {
         ArrayList<String> Desgn=new ArrayList<String>();
         ArrayList<Integer> Sal=new ArrayList<Integer>();
         ArrayList<String> CName=new ArrayList<String>();
-        ArrayList<Integer> phno=new ArrayList<Integer>();
+        ArrayList<Long> phno=new ArrayList<Long>();
         ArrayList<String> Emailid=new ArrayList<String>();
 
 
         int exit=0;
         while (exit!=1)
         {
-            System.out.println("1:Add employee\n 2:View Employee \n 3:Search Employee\n 4:Delete employee\n5:exit\n");
+            System.out.println("1:Add employee\n2:View Employee\n3:Search Employee\n4:Delete employee\n5:exit\n");
+            System.out.println("Enter your choice:");
 
             Scanner sc=new Scanner(System.in);
             int ch=sc.nextInt();
@@ -61,7 +63,7 @@ public class driverclass {
                     System.out.println("Enter phone num: ");
                     Scanner sc6=new Scanner(System.in);
                     long number= sc6.nextLong();
-                    phno.add(num);
+                    phno.add(number);
 
 
                     System.out.println("Enter email id: ");
@@ -92,6 +94,29 @@ public class driverclass {
 
                 case 3:
                     System.out.println("search emp");
+
+                    System.out.println("Enter emp code");
+                    Scanner sc8=new Scanner(System.in);
+                    int ec=sc.nextInt();
+
+                    //for each loop
+                    for (int i=0;i< Ecode.size();i++)
+                    {
+                        if(ec==Ecode.get(i))
+                        {
+                            System.out.println(EName.get(i));
+                            System.out.println(Desgn.get(i));
+                            System.out.println(Sal.get(i));
+                            System.out.println(CName.get(i));
+                            System.out.println(phno.get(i));
+                            System.out.println(Emailid.get(i));
+
+                        }
+                        else
+                        {
+                            System.out.println("Employee code not present\n");
+                        }
+                    }
 
                     break;
 
