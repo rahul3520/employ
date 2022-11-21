@@ -70,19 +70,40 @@ public class driverclass {
                     str=sc7.nextLine();
                     Emailid.add(str);
 
+                    break;
 
                 case 2:
                     System.out.println("view emp");
 
+                    for(int i=0;i<Ecode.size();i++)
+                    {
+                        System.out.println(Ecode.get(i));
+                        System.out.println(EName.get(i));
+                        System.out.println(Sal.get(i));
+                        System.out.println(Desgn.get(i));
+                        System.out.println(CName.get(i));
+                        System.out.println(phno.get(i));
+                        System.out.println(Emailid.get(i));
+
+
+
+                    }
+                    break;
+
                 case 3:
                     System.out.println("search emp");
+
+                    break;
 
                 case 4:
                     System.out.println("delete emp");
 
+                    break;
+
 
                 case 5:
                     exit=1;
+                    break;
 
                 default:
                     System.out.println("wrong choice");
